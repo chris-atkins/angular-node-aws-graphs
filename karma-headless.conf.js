@@ -10,7 +10,6 @@ module.exports = function(config){
     browsers : ['PhantomJS'],
 
     plugins : [
-            'phantomjs',
             'karma-phantomjs-launcher',
             'karma-jasmine',
             'karma-junit-reporter'

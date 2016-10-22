@@ -14,6 +14,7 @@ module.exports = function (config) {
 			'app/bower_components/underscore/underscore.js',
 			'app/bower_components/jquery/dist/jquery.js',
 			'app/bower_components/jasmine-jquery/lib/jasmine-jquery.js',
+			'app/bower_components/angular-plotly/src/angular-plotly.js',
 			'app/app-lib/**/*.js',
 			'app/app-lib/**/*.html'
 		],

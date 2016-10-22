@@ -1,7 +1,9 @@
 'use strict';
 exports.config = {
   allScriptsTimeout: 11000,
-
+	
+  chromeDriver: '../node_modules/chromedriver/lib/chromedriver/chromedriver',
+	
   specs: [
     '*.js'
   ],
@@ -13,10 +15,10 @@ exports.config = {
   baseUrl: 'http://localhost:8000/',
   
   params: {
-	  apiHostname: '127.0.0.1',
-	  apiPort: 5555,
+	  apiHostname: 'localhost',
+	  apiPort: 8000,
 	  apiBasePath: '/api',
-	  apiBaseUrl: 'http://127.0.0.1:5555/api'
+	  apiBaseUrl: 'http://localhost:8000/api'
   },
   
   framework: 'jasmine2',

@@ -15,10 +15,10 @@ exports.config = {
   baseUrl: 'http://ec2-54-152-94-59.compute-1.amazonaws.com:80/',
 
   params: {
-	  // apiHostname: process.env.SERVICE_IP,
-	  // apiBasePath: '/api',
-	  // apiPort: 5555,
-	  // apiBaseUrl: 'http://' + process.env.SERVICE_IP + ':5555/api'
+	  apiHostname: 'http://ec2-54-152-94-59.compute-1.amazonaws.com',
+	  apiBasePath: '/api',
+	  apiPort: 80,
+	  apiBaseUrl: 'http://ec2-54-152-94-59.compute-1.amazonaws.com:80/api'
   },
 
   framework: 'jasmine2',

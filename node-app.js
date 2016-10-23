@@ -5,7 +5,7 @@ var http = require('http');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var dataFetcher = require('./data-fetcher');
+var dataFetcher = require('./aws-data-fetcher');
 
 var port = process.env.PORT || '8000';
 var app = express();
@@ -16,8 +16,10 @@ app.use(bodyParser.urlencoded({extended: 'true'}));
 app.use(bodyParser.json());
 
 app.get('/api/topic-correlation/data', function (request, response, next) {
-	response.statusCode = 200;
-	response.json(dataFetcher.getData());
+	dataFetcher.getData(function (data) {
+		response.statusCode = 200;
+		response.json(data);
+	});
 });
 
 http.createServer(app).listen(app.get('port'), function () {
